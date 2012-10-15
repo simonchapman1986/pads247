@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta name="author" content="Simon Chapman"/> 
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="expires" content="1" />
+<link rel="stylesheet" type="text/css" href="../core/mvcms/templates/css/styles.css" media="screen" />
+<title>Administration Home</title>
+<!-- TinyMCE -->
+	<script type="text/javascript" src="[domain]/core/mvcms/templates/tiny_mce/tiny_mce.js"></script>
+    <script type="text/javascript">
+        tinyMCE.init({
+            mode : "textareas",
+            /*theme : "simple"*/
+			theme : "advanced",
+			plugins : "pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,wordcount,advlist,autosave",
+	
+			// Theme options
+			theme_advanced_buttons1 : "save,newdocument,|,bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,styleselect,formatselect,fontselect,fontsizeselect",
+			theme_advanced_buttons2 : "cut,copy,paste,pastetext,pasteword,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,anchor,image,cleanup,help,code,|,insertdate,inserttime,preview,|,forecolor,backcolor",
+			theme_advanced_buttons3 : "tablecontrols,|,hr,removeformat,visualaid,|,sub,sup,|,charmap,emotions,iespell,media,advhr,|,print,|,ltr,rtl,|,fullscreen",
+			theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,styleprops,|,cite,abbr,acronym,del,ins,attribs,|,visualchars,nonbreaking,template,pagebreak,restoredraft",
+			theme_advanced_toolbar_location : "top",
+			theme_advanced_toolbar_align : "left",
+			theme_advanced_statusbar_location : "bottom",
+			theme_advanced_resizing : true,
+			
+			content_css : "[domain]/templates/css/styles.css",
+			
+			// Style formats
+			style_formats : [
+				{title : 'Bold text', inline : 'b'},
+				{title : 'Header', inline : 'h2'},
+				{title : 'Sub Header', inline : 'h3'},
+				{title : 'Paragraph', inline : 'p'}
+			]
+        });
+    </script>
+    <!-- /TinyMCE -->
+</head> 
+ 
+<!-- high margin = thin layout --> 
+<body style="margin: 0 22%;"> 
+ 
+<div class="container"> 
+	<div class="header"> 
+		<a href="/admin/index"><span>ADMINISTRATION</span></a> 
+	</div> 
+	<div class="stripes"><span></span></div> 
+	<div class="nav"> 
+		[nav]
+		<div class="clearer"><span></span></div> 
+	</div> 
+	<div class="stripes"><span></span></div> 
+	<div class="main"> 
+	
+		<div class="left"> 
+			<div class="content"> 
+			<h1></h1>
+            <div style="font-size: 9px; display: block; float: right;">[loginout]</div>
+<script type="text/javascript">
+	function showhide(id){
+		if (document.getElementById){
+			obj = document.getElementById(id);
+			if (obj.style.display == "none"){
+				obj.style.display = "";
+			} else {
+				obj.style.display = "none";
+			}
+		}
+	}
+</script>
+
+[error]
+
+<form action="" method="post">
+	<table>
+    	<tr>
+        	<td>Username:</td><td><input type="text" name="username" /></td>
+        </tr>
+        <tr>
+			<td>Password:</td><td><input type="password" name="password" /></td>
+        </tr>
+        <tr>
+			<td colspan="2" align="right"><input type="submit" value="login" /></td>
+        </tr>
+    </table>
+</form>
+ 
+ 
+			</div> 
+ 
+		</div> 
+		<div class="right"> 
+ 
+			<div class="subnav"> 
+ 
+				<h1>Quick Links</h1> 
+				<ul> 
+					<li><a href="/home">site home page</a></li> 
+				</ul> 
+ 
+			</div> 
+ 
+		</div> 
+ 
+		<div class="clearer"><span></span></div> 
+ 
+	</div> 
+ 
+	<div class="footer"> 
+	
+			<div class="col3"> 
+ 
+				<h2>Statistics</h2> 
+				<ul> 
+					<li><em>please login first</em></li> 
+				</ul> 
+ 
+			</div> 
+ 
+			<div class="col3center"> 
+				<h2>Access Controls</h2> 
+				<ul> 
+					<li><em>please login first</em></li> 
+				</ul> 
+			</div> 
+ 
+			<div class="col3"> 
+				<h2>External Links</h2> 
+				<ul> 
+					<li><a href="/admin/home">control panel homepage</a></li> 
+					<li><a href="/home">site home page</a></li> 
+				</ul> 
+			</div> 
+ 
+			<div class="bottom"> 
+				
+				<span class="left">&copy; 2010 MVCMS. Valid <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> &amp; <a href="http://validator.w3.org/check?uri=referer">XHTML</a>.</span> 
+				<div class="clearer"><span></span></div> 
+ 
+			</div> 
+ 
+	</div> 
+ 
+</div> 
+ 
+</body> 
+ 
+</html>

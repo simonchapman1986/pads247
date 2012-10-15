@@ -1,0 +1,53 @@
+setup:-
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+Config: 
+
+used to set db paramaters
+
+location
+
+/config.php
+
+-----------------------------------------------------------------------------
+
+templates: 
+
+location for your html template files
+
+/templates
+
+-----------------------------------------------------------------------------
+
+templates config: 
+
+used to configure your template
+
+location
+
+/templates/templates.xml
+
+-----------------------------------------------------------------------------
+
+Symlinks (required): 
+
+symlinks that are required by the cms in order to work correctly
+
+(/core/core/lib) mvcms -> ../../mvcms
+
+~#: cd /path/to/site/root/core/core/lib
+~#: ln -s ../../mvcms mvcms
+
+-----------------------------------------------------------------------------
+
+useful locations:
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+bootstrap app: 
+/core/core.php
+
+librarys: 
+/core/core/lib
+
+Zend library: 
+/core/core/lib/Zend

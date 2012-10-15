@@ -1,0 +1,1141 @@
+/*  Saffron Digital
+www.saffrondigital.com
+
+Author: Nicole Bouchard
+Date: June 21, 2012
+
+*/
+
+/* BASE STYLES - DESKTOP BROWSER
+----------------------------------------------------------------------*/
+
+/* Global */
+
+html, body { background-color: #FFF; color: #999; font-family: Arial, Helvetica, san-serif;}
+
+* { /* resets the box model so width/height element is set to the specified value, regardless of borders, paddings, and margins */
+	   -webkit-box-sizing: border-box;
+	      -moz-box-sizing: border-box;
+	           box-sizing: border-box;
+}
+
+body { font-size: 0.875em; }					/* 14pt / 16pt */
+
+h1 { font-size: 5.357142857142857em; font-family: "Myriad Pro", Arial, sans-serif; color: #989898;} 		/* 75pt / 14pt */
+h2 { font-size: 1.285714285714286em; font-family: "Myriad Pro", Arial, sans-serif; color: #989898;} 		/* 18pt / 14pt */
+h3 { font-size: 1.142857142857143em; font-family: "Myriad Pro", Arial, sans-serif;} 						/* 16pt / 14pt */
+
+p { margin: 10px 0px; }
+
+
+/* Header / Nav */
+header { 
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	display: block;
+	z-index: 100;
+	background-color: #fff;
+	/*border-bottom: 2px solid #c3c3c3;*/
+	-webkit-box-shadow: 0px 4px 10px -5px #333;
+	   -moz-box-shadow: 0px 4px 10px -5px #333;
+	        box-shadow: 0px 4px 10px -5px #333;
+}
+
+nav {
+	width: 1280px;
+	height: 75px;
+	margin: 0px auto;
+	padding: 10px 160px;
+	background-color: #fff;
+	/*-webkit-box-shadow: 0px 6px 10px -5px #aaa;
+	   -moz-box-shadow: 0px 6px 10px -5px #aaa;
+	        box-shadow: 0px 6px 10px -5px #aaa;*/
+}
+
+nav .logo { 
+	width: 140px;
+	height: 55px;
+	text-indent: -1000px;
+	overflow: hidden;
+	background: url(/templates/images/saffron_logo.gif) no-repeat top left;
+	float: left;
+}
+
+nav ul {
+	float: right;
+}
+
+nav ul li {
+	padding: 40px 0px 10px 65px;
+	text-transform: uppercase; 
+	float: left;
+}
+
+nav ul:last-of-type li:first-of-type { padding-left: 0px;} 
+
+nav ul li a {
+	text-decoration: none;
+	color: #999;
+}
+
+nav ul li a:hover , nav ul li a.on {
+	color: #5b1f69;
+}
+
+nav ul li.contact a {
+	color: #5482ab;
+	font-weight: bold;
+	background: url(/templates/images/menu_arrow.gif) no-repeat right 4px;
+	padding-right: 15px;
+}
+
+nav ul li.contact a:hover {
+	color: #5482ab;
+}
+
+nav ul li.contact { position: relative; }
+
+nav ul li.contact div { 
+	display: none;
+	position: absolute;
+	right: -20px;
+	top: 65px;
+	color: #5482ab;
+	text-transform: none;
+	background: url(/templates/images/contact_dd_bg.png) top center no-repeat;
+	width: 269px;
+	height: 237px;
+	padding: 0px 45px;
+	font-weight: bold;
+	font-size: 0.8571428571428571em;		/* 12pt / 14pt */
+}
+
+nav ul li.contact div h4 {
+	font-size: 1.25em;		/* 15pt / 12pt */
+	margin-top: 30px
+}
+
+nav ul li.contact div a {
+	background: none;
+	font-weight: normal;
+}
+
+nav ul li.contact:hover div { display: block;}
+
+/* Sections / Pages */
+section {
+	min-height: 700px;
+	width: 100%;
+	margin: 0px auto;
+	display: block;
+	float: left; /* prevents margins collapsing with child element */
+}
+
+section#play 		{ background-color: #5b1f69;}
+section#inspire		{ background-color: #ff6319;}
+section#discover 	{ background-color: #cd202c;}
+section#talk 		{ background-color: #5482ab;}
+
+
+section .contentArea {
+	width: 1280px;
+	margin: 0px auto;
+	padding: 10px 160px;
+	background-color: #fff;
+	/*min-height: 700px;*/
+	overflow: hidden;
+	position: relative;
+}
+
+section header { 
+	position: static; 
+	-webkit-box-shadow: none;
+	   -moz-box-shadow: none;
+	        box-shadow: none;
+}
+
+section header h1,
+section header h2 { 
+	padding: 10px;
+}
+
+/* Block-level elements */
+
+.rows-1 { height: 150px;}
+.rows-2 { height: 320px;}
+.rows-3 { height: 490px;}
+
+.col-1, .col-2, .col-3 { 
+	float: left; 
+	width: 300px;
+	margin: 0px 10px;
+}
+
+.video { 
+	height: 170px;
+	position: absolute;
+	background-color: #fff;
+	border: 2px solid #5b1f69;
+	width: 300px;
+	margin: 10px;
+	float: left;
+	
+	padding-top: 30px;
+	text-align: center;
+}
+
+.timeline {
+	width: 300px;
+	height: 150px;
+	background-color: #CCC;
+	border: 1px solid #666;
+	margin: 10px 0px;
+	float: left;
+}
+
+.team { 
+	height: 300px;
+	width: 300px;
+	margin: 10px 0px;
+	float: left;
+	background-color: #CCC;
+	border: 1px solid #666;
+}
+
+.controls {
+	height: 50px;
+	width: 1280px;
+	position: absolute;
+	top: 160px;
+	left: -160px;
+}
+
+.prev {
+	background: url(/templates/images/prev_icon.gif) no-repeat top center;
+	float: left;
+	width: 50px;
+	height: 50px;
+	text-indent: -1000px;
+	overflow: hidden;
+	z-index: 30;
+	cursor: pointer;
+}
+.next {
+	background: url(/templates/images/next_icon.gif) no-repeat top center;
+	float: right;
+	width: 50px;
+	height: 50px;
+	text-indent: -1000px;
+	overflow: hidden;
+	z-index: 30;
+	cursor: pointer;
+}
+	
+#play .controls { border-color: #5B1F69;}
+#inspire .controls { border-color: #FF6319; top: 415px;}
+#discover .controls { border-color: #CD202C; top: 490px;}
+
+.infographic {
+	width: 1280px;
+	margin: 0px auto;
+}
+
+.infographic img { max-width: 100%;}
+
+.filterWrap {
+	background:url(/templates/images/filter_bg.gif) repeat-x top left;
+	width: 1280px;
+	margin-left: -160px;
+	height: 40px;
+	padding: 5px 160px 0px;
+	text-align: center;
+}
+
+
+.filterWrap .control {
+	cursor: pointer;
+	width: 12px;
+	height: 14px;
+	text-indent: -1000px;
+	overflow: hidden;
+	margin: 8px 0px;
+}
+
+.filterWrap .prev {
+	background: url(/templates/images/timeline_arrow_L.gif) no-repeat left top;
+	float: left;
+}
+
+.filterWrap .next {
+	background: url(/templates/images/timeline_arrow_R.gif) no-repeat left top;
+	float: right;
+}
+
+.filterWrap .filters { 
+	float: left;
+	width: 936px;
+}
+
+.filterWrap .filters ul {
+	color: #b2b2b2;
+	height: 30px;
+	float: left;
+	text-transform: uppercase;
+}
+
+.filterWrap .filters ul li {
+	float: left;
+	padding: 8px 20px;
+	cursor: pointer;
+}
+
+.filterWrap .filters ul:nth-of-type(2) { float: right;}
+
+#inspire .filterWrap .filters ul li { margin: 0px 45px;}
+#discover .filterWrap .filters ul li { margin: 0px 7px;}
+
+#inspire .filters ul li:hover, #inspire .filters ul li.on { color: #FF6319;}
+#discover .filters ul li:hover, #discover .filters ul li.on { color: #CD202C;}
+
+/* Products & Services */
+
+section#play .contentArea { margin-top: 75px;}
+
+section#play header h1 span { color: #5b1f69;}
+section#play header h2 { padding-left: 109px;}
+
+#videoContainer {
+	position: relative;
+	width: 100%;
+}
+
+ul.pagination {
+	float: right;
+	height: 11px;
+	margin-top: -20px;
+}
+
+ul.pagination li {
+	background: url(/templates/images/pagination_icons.gif) no-repeat right top;
+	height: 11px;
+	width: 11px;
+	text-indent: -100px;
+	overflow: hidden;
+	float: left;
+	margin-left: 5px;
+	cursor: pointer;
+}
+
+.videoDesc {
+	width: 565px;
+	margin: 0px auto;
+	padding-top: 360px;
+}
+
+.videoDesc h1 {
+	font-size: 1.285714285714286em;  /* 18pt / 14pt */
+	width: 100%;
+	text-align: center;
+	margin-bottom: 7px;
+}
+.videoDesc h2 {
+	font-size: 1.142857142857143em;  /* 16pt / 14pt */
+	width: 100%;
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+.videoDesc p {
+	font-size: 0.8571428571428571em;  /* 12pt / 14pt */
+	line-height: 1.4em;
+}
+
+ul.pagination li.on {
+	background: url(/templates/images/pagination_icons.gif) no-repeat left top;
+}
+
+/* History Timeline */
+#timelineContainer {
+	display: block;
+	width: 100%;
+	overflow: hidden;
+	margin: 10px 0px;
+}
+
+/* Team */
+#teamContainer {
+	display: block;
+	width: 100%;
+	/*height: 640px;*/
+	overflow: hidden;
+	margin: 10px 0px;
+}
+
+/* Careers & Contact Us */
+#talk h2 {
+	padding: 10px;
+}
+
+#talk section:first-of-type h3 {
+	padding: 5px 10px;
+	font-weight: bold;
+	border-bottom: 2px solid #ddd;
+}
+
+#talk section:first-of-type h3:first-child {border-top: 2px solid #ddd;}
+
+#talk section {
+	min-height: 0px;
+	display: block;
+	float: none;
+	width: 100%;
+	overflow:hidden;
+}
+
+#talk section a { color: #5482AB; }
+
+#talk section .job {
+	width: 100%;
+	overflow:hidden;
+	padding: 10px 10px;
+	border-bottom: 2px solid #ddd;
+}
+
+#talk .job .pdf {
+	background: url(/templates/images/pdf_icon.gif) no-repeat top center;
+	text-align: center;
+	text-decoration: none;
+	padding-top: 63px;
+	width: 51px;
+	float: left;
+}
+
+#talk .job .info {
+	float: left;
+	width: 550px;
+	padding-left: 25px;
+}
+
+#talk .job .info .datePosted {
+	float: left;
+	font-weight: bold;
+	padding-right: 15px;
+}
+
+#talk .job .info .jobTitle {
+	float: left;
+	font-weight: bold;
+}
+
+#talk .job .info .jobDesc {
+	clear: both;
+	font-size: 0.8571428571428571em; 			/* 12pt / 14pt */
+}
+
+#talk .job .apply {
+	background-color: #5482ab;
+	width: 225px;
+	height: 45px;
+	padding: 12px 0px;
+	text-align: center;
+	float: right;
+	color: #fff;
+	font-size: 1.285714285714286em;  			/* 18pt / 14pt */
+}
+
+#talk section .addressWrap {
+	width: 490px; 
+	padding: 0px 10px;
+	float: left;
+}
+
+#talk section .address {
+	float: left;
+	padding-right: 50px;
+}
+
+#talk section .address a { text-decoration: none;} 
+
+#talk section .map {
+	float: right;
+	border: 3px solid #5482ab;
+	width: 460px;
+	height: 250px;
+	margin: 0px 10px 50px 0px;
+	text-align: center;
+	background-color: #eee;
+	padding-top:100px;
+}
+
+/* Footer */
+
+footer {
+	margin: 0px auto;
+	text-align: right;
+	background-color: #5482ab; 
+	color: #fff;
+	float: left;
+	width:100%
+}
+
+footer p {
+	margin: 10px auto;
+}
+
+/*  MEDIA QUERIES
+----------------------------------------------------------------------*/
+
+/* Disable iOS/WinMobile font size changes */
+@media screen and (max-width: 600px),
+screen and (max-device-width: 480px) {
+	html {
+		-ms-text-size-adjust: none;
+		-webkit-text-size-adjust: none;
+	}
+}
+
+/* Tablet - Landscape  */
+@media screen and (max-width: 1280px) {
+	/* Global */
+	
+	/* Header / Nav */
+	nav {
+		width: 1024px;
+		padding: 10px 42px;
+	}
+	
+	/* Sections / Pages */
+	section .contentArea {
+		width: 1024px;
+		padding: 10px 32px;
+	}
+	
+	section#play .contentArea { margin-top: 75px;}
+		
+	/* Block-level elements */
+	.infographic { 
+		width: 1024px;
+		overflow: hidden;
+	}
+		
+	.filterWrap {
+		width: 1024px;
+		margin-left: -32px;
+		padding: 5px 32px 0px;
+	}
+	
+	/* Products & Services */
+	#play .controls { top: 500px;}
+	#play .prev { left: 32px;}
+	#play .next { right: 32px;}
+	
+	/* History Timeline */
+	#timelineContainer { margin-bottom: 60px;}
+	
+	#inspire .controls { top: 710px;}
+	#inspire .prev { left: 420px;}
+	#inspire .next { right: 420px;}
+
+	/* Team */
+	#teamContainer { margin-bottom: 65px;}
+	
+	#discover .controls { top: 840px;}
+	#discover .prev { left: 420px;}
+	#discover .next { right: 420px;}
+	
+	/* Careers & Contact Us */
+	
+	/* Footer */
+	footer p {
+		width: 1024px;
+	}
+}
+
+/* Tablet - Portrait  */
+@media screen and (max-width: 1024px) {
+	/* Global */
+	
+	/* Header / Nav */
+	nav {
+		width: 768px;
+		padding: 10px 64px;
+	}
+	nav ul {
+		width: 481px;
+	}
+	
+	nav ul li {
+		padding: 8px 30px;
+	}
+	
+	/* Sections / Pages */
+	section .contentArea {
+		width: 768px;
+		padding: 10px 64px;
+	}
+	
+	/* Block-level elements */
+	
+	.col-3 { display: none;}
+
+	.infographic { 
+		width: 768px;
+		overflow: hidden;
+	}
+	
+	.filterWrap {
+		width: 768px;
+		margin-left: -64px;
+		height: 40px;
+		padding: 5px 64px 0px;
+	}
+	
+	.filterWrap .filters { 
+		width: 616px;
+		overflow: hidden;
+	}
+	
+	/* Products & Services */
+	.videoDesc {
+		padding-top:;
+	}
+	
+	#play .controls { top: 310px;}
+	#play .prev { left: 0px;}
+	#play .next { right: 0px;}
+	
+	/* History Timeline */
+	#inspire .controls { top: 710px;}
+	#inspire .prev { left: 310px;}
+	#inspire .next { right: 310px;}
+	
+	#inspire .filterWrap .filters ul li { margin: 0px 19px;}
+
+	/* Team */
+	#discover .controls { top: 840px;}
+	#discover .prev { left: 310px;}
+	#discover .next { right: 310px;}
+	
+	#discover .filterWrap { position: relative;}
+	
+	#discover .filterWrap .filters ul { margin-left: 0px;}
+	#discover .filterWrap .filters ul li { margin: 0px 0px;}
+	
+	/*#discover .fade {
+		width: 640px;
+		height: 30px;
+		background:url(/templates/images/filter_fade.png) no-repeat top center;
+		position: absolute;
+		top: 5px;
+		left: 64px;
+		z-index: 8;
+	}*/
+	
+	
+	/* Careers & Contact Us */
+	#talk .job .info {
+		width: 420px;
+	}
+	
+	#talk .job .apply {
+		width: 125px;
+	}
+	
+	#talk section .addressWrap {
+		width: 230px; 
+		float: left;
+		margin-bottom: 10px;
+	}
+		
+	#talk section .map {
+		width: 400px;
+		height: 250px;
+		margin-bottom: 0px;
+	}
+	
+	/* Footer */
+	footer p {
+		width: 768px;
+	}
+}
+
+/* Mobile - Landscape  */
+@media screen and (max-width: 768px) {
+	/* Global */
+
+	h1 { font-size: 2em; } 							/* 28pt / 14pt */
+	h2 { font-size: 1.142857142857143em; } 			/* 16pt / 14pt */
+	
+	/* Header / Nav */
+	nav {
+		width: 480px;
+		height: 56px;
+		padding: 7px 20px;
+	}
+	nav ul {
+		width: 300px;
+		height: 30px;
+		overflow: hidden;
+	}
+	
+	nav ul li {
+		padding: 8px 10px;
+	}
+	
+	nav .logo { 
+		width: 107px;
+		height: 41px;
+		background: url(/templates/images/saffron_logo_mobile.gif) no-repeat top left;
+	}
+	
+	/* Sections / Pages */
+	section {
+		min-height: 300px;
+	}
+	
+	section .contentArea {
+		width: 480px;
+		padding: 10px 80px;
+	}
+	
+	section#play .contentArea { margin-top: 56px; overflow: hidden;}
+	
+	section header h1, section header h2 {
+		padding: 3px 10px;
+	}
+	
+	/* Block-level elements */
+	#play .controls {
+		top: 300px;
+	}
+
+	.video { 
+		position: relative;
+		float: left;
+		cursor: pointer;
+		margin: 0px 10px;
+	}
+	
+	.video:nth-of-type(2),
+	.video:nth-of-type(4) {
+		opacity: .5;	
+	}
+	
+	.infographic {
+		width: 480px;
+	}
+	
+	.col-1, .col-2, .col-3 {
+		float: left;
+		display: inline-block;
+		margin: 10px 0px;
+	}
+	
+	.filterWrap {
+		width: 480px;
+		margin-left: -80px;
+		padding: 5px 10px 0px;
+	}
+	
+	.filterWrap .filters { 
+		width: 436px;
+		overflow: hidden;
+	}
+		
+	/* Products & Services */
+	#videoContainer {
+		height: auto;
+		width: 320px;
+		margin: 10px 0px 0px;
+		position: relative;
+	}
+	
+	ul.pagination {
+		margin: 3px 0px 0px;
+	}
+	
+	#videoCarousel {
+		position: absolute;
+		top: 20px;
+		left: -650px;
+		width: 1600px;
+		height: 170px;
+	}
+	
+	.videoDesc {
+		clear: both;
+		width: 300px;
+		padding-top: 230px;
+	}
+	
+	.videoDesc h2	{ margin-bottom: 5px;}	
+	.videoDesc p { display: none;}
+	
+	/* History Timeline */
+	#inspire .filterWrap .filters ul li {
+		margin: 0 0px;
+		padding: 8px 24px;
+	}
+	
+	#inspire .controls { top: 290px;}
+	#inspire .prev { left: 0px;}
+	#inspire .next { right: 0px;}
+	
+	#timelineContainer {
+		position: absolute;
+		top: 0px;
+		left: -1285px;
+		width: 2880px;
+		height: 170px;
+		margin: 10px 0px 60px;
+		position: relative;
+		overflow: visible;
+	}
+	
+	#timelineContainer .col-1, #timelineContainer .col-2, #timelineContainer .col-3 {
+		width: 960px;
+	}
+	
+	.timeline { 
+		margin: 0px 10px;
+		opacity: .5;
+	}
+	
+	.timeline.active { opacity: 1; }
+	
+	/* Team */
+	
+	#discover .controls { top: 445px;}
+	#discover .prev { left: 0px;}
+	#discover .next { right: 0px;}
+	
+	#teamContainer {
+		position: absolute;
+		top: 0px;
+		left: -965px;
+		width: 1920px;
+		height: 320px;
+		margin: 10px 0px 60px;
+		position: relative;
+		overflow: visible;
+	}
+	
+	#teamContainer .col-1, #teamContainer .col-2, #teamContainer .col-3 {
+		width: 640px;
+	}
+	
+	.team { 
+		margin: 0px 10px;
+		opacity: .5;
+	}
+	
+	.team.active { opacity: 1; }
+	
+	/* Careers & Contact Us */
+	#talk .job .info {
+		width: 245px;
+		padding-left: 15px;
+	}
+	
+	#talk .job .apply {
+		clear: both;
+		width: 300px;
+		margin-top: 10px;   
+		height: 39px;
+    	padding: 8px 0;
+		-moz-border-radius: 5px;
+		     border-radius: 5px;
+	}
+	
+	#talk section .addressWrap {
+		width: 100%; 
+		float: none;
+		margin-bottom: 0px;
+		overflow: hidden;
+	}
+		
+	#talk section .map {
+		float: none;
+		width: 300px;
+		height: 200px;
+		margin: 10px;
+	}
+	
+	/* Footer */
+	footer p {
+		width: 480px;
+	}
+}
+
+/* Mobile - Portrait  */
+@media screen and (max-width: 480px) {
+	/* Global */
+	h1 { font-size: 1.428571428571429em; } 			/* 20pt / 14pt */
+	h2 { font-size: 1.071428571428571em; } 			/* 15pt / 14pt */
+	
+	/* Header / Nav */
+	nav {
+		width: 310px;
+		padding: 7px 5px;
+	}
+	
+	nav ul {
+		width: auto;
+		height: 30px;
+		overflow: hidden;
+		margin: 20px 0px 0px 0px;
+	}
+
+	nav ul li a {
+		text-transform: none;
+	}
+	
+	nav ul li.contact a {
+		background: none;
+		font-weight: normal;
+		color: #999;
+	}
+	
+	nav ul li {
+		padding: 8px 10px;
+	}
+	
+	nav .mobiledd {
+		float: right;
+		width: 49px;
+		height: 41px;
+		background: url(/templates/images/menu_tab.gif) no-repeat top left;
+		position: relative;
+		margin: 9px -5px 0px 0px;
+	}
+	
+	nav .mobiledd ul {
+		display: none;
+		position:absolute;
+		right: 0px;
+		top: 41px;
+		margin: 0px;
+		height: auto;
+		width: 310px;
+		background-color: #efefef;
+	}
+	
+	nav .mobiledd:hover ul { display: block;}
+	
+	nav .mobiledd ul li {
+		float: none;
+		border-bottom: 1px solid #fff;
+		width: 280px;
+		margin: 0px 15px;
+		padding: 0px;
+	}
+	
+	nav .mobiledd ul li a {
+		padding: 15px 0px;
+		text-align: center;
+		width: 280px;
+		display: block;
+	}
+	
+	/* Sections / Pages */
+	section {
+		min-height: 200px;
+	}
+	
+	section .contentArea {
+		width: 310px;
+		padding: 10px 0px;
+	}
+		
+	section header h1, section header h2 {
+		padding: 3px 10px;
+	}
+	
+	/* Block-level elements */
+	.controls {
+		clear: both;
+		position: relative;
+		top: auto;
+		left: auto;
+		margin: 5px 10px;
+		text-indent: 0px;
+		height: auto;
+		width: 100%;
+		font-weight: bold;
+		padding: 5px;
+		text-align:center;
+	}
+	
+	.prev {
+		float: left;
+		background-image: none;
+		background-color: #CCCCCC;
+	}
+	.next {
+		float: right;
+	}
+	
+	.infographic {
+		width: 310px;
+	}
+
+	
+	/* Products & Services */
+	#videoContainer {
+		width: 300px;
+		overflow: hidden;
+		margin: 0px 5px;
+	}
+	
+	#play .controls { 
+	}
+	
+	/* History Timeline */
+
+	/* Team */
+	
+	/* Careers & Contact Us */
+	#talk .job .info {
+		width: 245px;
+		padding-left: 15px;
+	}
+	
+	#talk .job .apply {
+		clear: both;
+		width: 300px;
+		margin-top: 10px;   
+		height: 39px;
+    	padding: 8px 0;
+		-moz-border-radius: 5px;
+		     border-radius: 5px;
+	}
+	
+	#talk section .addressWrap {
+		width: 100%; 
+		float: none;
+		margin-bottom: 0px;
+		overflow: hidden;
+	}
+		
+	#talk section .map {
+		float: none;
+		width: 300px;
+		height: 200px;
+		margin: 10px;
+	}
+	
+	/* Footer */
+	footer p {
+		width: 320px;
+	}
+}
+
+/* Tablet - Portrait & Up */
+@media screen and (min-width: 769px) {
+	.video { 
+		margin: 0px; 
+		height: 320px;
+		width: 565px;
+		cursor: pointer;
+	}
+	
+	.video:nth-of-type(1) { /* left-back element */
+		display: none;
+	}
+	
+	.video:nth-of-type(2) { /* left-middle element */
+		top: 35px;
+		left: 0px;
+		z-index: 2;
+		height: 290px;	
+		width: 433px;
+		opacity: .7;	
+	}
+	
+	.video:nth-of-type(3) { /* center-front element */
+		top: 20px;
+		left: 37px;
+		z-index: 3;
+	}
+	
+	.video:nth-of-type(4) { /* right-middle element */
+		top: 35px;
+		right: 0px;
+		z-index: 2;
+		height: 290px;	
+		width: 433px;
+		opacity: .7;
+	}
+	
+	.video:nth-of-type(5) { /* right-back element */
+		display: none;
+	}
+}
+
+/* Tablet & Desktop Browser  */
+@media screen and (min-width: 1025px) {
+	/* Block-level elements */
+	
+	.video:nth-of-type(1) { /* left-back element */
+		top: 50px;
+		left: 0px;
+		z-index: 1;
+		height: 257px;
+		width: 385px;
+		opacity: .5;
+		display: block;
+	}
+	
+	.video:nth-of-type(2) { /* left-middle element */
+		top: 35px;
+		left: 40px;
+		z-index: 2;
+		height: 290px;	
+		width: 433px;
+		opacity: .7;	
+	}
+	
+	.video:nth-of-type(3) { /* center-front element */
+		top: 20px;
+		left: 197px;
+		z-index: 3;
+	}
+	
+	.video:nth-of-type(4) { /* right-middle element */
+		top: 35px;
+		right: 40px;
+		z-index: 2;
+		height: 290px;	
+		width: 433px;
+		opacity: .7;
+	}
+	
+	.video:nth-of-type(5) { /* right-back element */
+		top: 50px;
+		right: 0px;
+		z-index: 1;
+		height: 257px;
+		width: 385px;
+		opacity: .5;
+		display: block;
+	}
+}
+
+
+/* Desktop Browser  */
+@media screen and (min-width: 1281px) {
+	
+	/* Products & Services */
+	
+	/* Footer */
+	footer {
+		width: 100%;
+	}
+	
+	footer p {
+		width: 1280px;
+		margin: 10px auto;
+		padding: 0px 0px;
+	}
+}

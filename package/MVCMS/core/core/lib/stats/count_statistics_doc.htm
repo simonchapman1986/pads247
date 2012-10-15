@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Counter & visitor statistics documentation</title>
+
+<style type="text/css">
+<!--
+.code {
+	font:14px 'Courier New', Courier, mono;
+	color:#0000FF;
+}
+.style1 {
+	color: #CC9900
+}
+-->
+</style>
+</head>
+<option selected
+<body>
+<h1>Counter & visitor statistics<span style="font-size: 14px; font-weight: normal;"> version 2.0 </span></h1>
+<h2>Description</h2>
+<p>This version is a replacement of the old count_visitor class. There are lot of good systems like this class but most of them are really complex and difficult to modify. You have to use this kind of systems like provided. This class is not an alternative if you look for the same amount functions, but it's a light weight solution to integrate into your website. </p>
+<ul><b>Current functions</b>
+  <li>Unique visitor counter (time  operated)</li>
+  <li>Registration of information about the visitor (referer, ip address, date/time etc.)</li>
+  <li>Saving the visitors country code (ip address based)</li>
+  <li>(graphical) Visitor statistics (periods, top 10, country based...)</li>
+  <li>HTML code generation (statistics) </li>
+</ul>
+<h2>Requirements</h2>
+<p>This class requires a PHP enabled Apache (virtual) host. I tested this class with PHP 4.3 and MySQL 3.23 on Windows and Linux. <br> 
+  You can use this class with the php setting register_globals = off. </p>
+<h2>Installation</h2>
+<ul>
+  <li>Use both sql files to create the MySQL tables.</li>
+  <li>Now change the config-file "db_config.php" to fit your environment.</li>
+  <li>To fit the path structure check the include paths in the example / application files. I used the server variable &quot;DOCUMENT_ROOT&quot; as the root level.<br>
+    Above the root the is a folder named &quot;classes&quot;. Inside this folder I used the folder named &quot;count_visitor_statistics&quot; (the standard location for all files).</li>
+  <li>Now you can include the counter method in the required files. Tip! use one included file for several scripts! </li>
+</ul>
+<h2>How to use?</h2>
+<p>It's simple, place only a few rows of code in the top of a script and every (unique) visit is counted. Run the visitor_statistics file for all information about the counted visits.<br>
+  Next all import 
+
+
+methods
+
+ and variables are explained.</p>
+<h3>Variables:</h3>
+<p><b>var $referer;</b><b> (string)</b><br>
+  This 
+
+
+variable
+
+ holds the http referer information if exists. Variable is set by the class constructor</p>
+<p><b>var $delay; (default =1, integer)</b><br> 
+  The amount of time in hours before a visitor is counted again. Use a value of 24 to count unique visitor only ones day.</p>
+<h3>Methods:</h3>
+<p><b>check_last_visit()</b><br> 
+  Before a new visit is 
+
+
+registered, a check is done by this method. This function will search the database for records where the visitor with an ip-address has visited the site between the current time and the number of hours defined by <b>$delay</b>.</p>
+<p><b>get_country()</b><br>
+  Before a new visit is written to a table, the class will search for the country with this method. This query is possible with the ip2nation tables from Per Gustafson, visit his home for later updates: <a href="http://www.ip2nation.com/" target="_blank">http://www.ip2nation.com/</a></p>
+<p><b>insert_new_visit()</b><br>
+  After the last visit check is done (and the boolean is true) the visit will be registered with this method. The class uses some server variables inside the query.</p>
+<p><b>show_all_visits(), show_visits_today(), first_last_visit($type = &quot;last&quot;)</b><br>
+  These 
+
+
+methods
+
+ are used to query the 
+
+
+database
+
+ for simple visit statistics, like all visits, all visits today and the last (first visit). You can use the result of these methods on your website. Examples </p>
+<ul style="list-style-type: none;" class="code">
+  <li> <b>echo</b> $example-&gt;show_all_visits()<span class="style1"> // will show all 
+
+
+visits
+
+</span></li>
+  <li><b>echo</b> $example-&gt;show_visits_today() <span class="style1">// will only show the  
+
+
+visits
+
+ of the day </span></li>
+  <li><b>echo</b> $example-&gt;first_last_visit(&quot;last&quot;)<span class="style1"> // will show the last (use &quot;first&quot; for the first visit) visit (default = last) </span></li>
+</ul>
+<p><b>stats_country()</b><br> 
+  This method shows the top 10 visitors grouped by a country. Together with the method <b>res_country_top()</b> it's possible to create a quick view for this data. </p>
+<ul style="list-style-type: none;" class="code">
+  <li> <b>echo</b> $renew_password-&gt;stats_country()<span class="style1"> // will show a table with 
+
+
+graphics, country codes and numbers </span></li>
+</ul>
+<p><b>stats_totals()</b><br> 
+  With this method is it possible to show visitor data over a period of max 12 month. The 
+
+
+results
+
+ are all visits grouped by a month. </p>
+<ul style="list-style-type: none;">
+  <li class="code"><b>echo</b> $example-&gt;stats_totals()<span class="style1"> // creates a table with monthly results </span></li>
+</ul>
+<p><b>stats_monthly($month, $year)</b><br> 
+Use this method results as the daily visits. You can post the month and year to this method and you get a table with visit data.</p>
+<ul style="list-style-type: none;">
+  <li class="code"><b>echo</b> $example-&gt;stats_monthly(11, 2004)<span class="style1"> // will show the visits in 
+
+
+November
+
+ 2004 in a daily format</span></li>
+</ul>
+<p><b>build_rows_totals($array_labels, $array_values)</b><br>
+  This method is used in the most 
+
+
+reporting methods, the two parameters are used for the label (example: the day) and the value (example: visits a day). This method is only to use with other methods.</p>
+<h2>todo...</h2>
+<p> There is a lot coding work to do, to make this class really powerful. I started with this script because in need my statistics a little different than in webalizer. That&rsquo;s why these functions are more important to me: </p>
+<ul>
+  <li>more information about query strings from google</li>
+  <li>clickable http referers with the whole query string</li>
+  <li> ... </li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,13 @@
+php_flag eaccelerator.enable 0
+php_flag eaccelerator.optimizer 0
+
+Options +FollowSymLinks
+
+DirectoryIndex core/core.php 
+
+RewriteEngine on
+RewriteRule ^admin/([^/\.]+)/([^/\.]+)/([^/\.]+) ?admin=$1&type=$2&id=$3
+RewriteRule ^admin/([^/\.]+)/([^/\.]+) ?admin=$1&type=$2
+RewriteRule ^admin/([^/\.]+)$ ?admin=$1
+RewriteRule ^([^/\.]+)/([^/\.]+)$ ?page=$1&page2=$2
+RewriteRule ^([^/\.]+)$ ?page=$1

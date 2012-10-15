@@ -1,0 +1,664 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*media queries only*/
+
+
+
+/*  MEDIA QUERIES
+----------------------------------------------------------------------*/
+
+/* Disable iOS/WinMobile font size changes */
+@media screen and (max-width: 600px),
+screen and (max-device-width: 480px) {
+	html {
+		-ms-text-size-adjust: none;
+		-webkit-text-size-adjust: none;
+	}
+}
+
+/* Tablet - Landscape  */
+@media screen and (max-width: 1280px) {
+	/* Global */
+	
+	/* Header / Nav */
+	nav {
+		width: 1024px;
+		padding: 10px 42px;
+	}
+	
+	/* Sections / Pages */
+	section .contentArea {
+		width: 1024px;
+		padding: 10px 32px;
+	}
+	
+	section#play .contentArea { margin-top: 75px;}
+		
+	/* Block-level elements */
+	.infographic { 
+		width: 1024px;
+		overflow: hidden;
+	}
+		
+	.filterWrap {
+		width: 1024px;
+		margin-left: -32px;
+		padding: 5px 32px 0px;
+	}
+	
+	/* Products & Services */
+	#play .controls { top: 500px;}
+	#play .prev { left: 32px;}
+	#play .next { right: 32px;}
+	
+	/* History Timeline */
+	#timelineContainer { margin-bottom: 60px;}
+	
+	#inspire .controls { top: 710px;}
+	#inspire .prev { left: 420px;}
+	#inspire .next { right: 420px;}
+
+	/* Team */
+	#teamContainer { margin-bottom: 65px;}
+	
+	#discover .controls { top: 840px;}
+	#discover .prev { left: 420px;}
+	#discover .next { right: 420px;}
+	
+	/* Careers & Contact Us */
+	
+	/* Footer */
+	footer p {
+		width: 1024px;
+	}
+}
+
+/* Tablet - Portrait  */
+@media screen and (max-width: 1024px) {
+	/* Global */
+	
+	/* Header / Nav */
+	nav {
+		width: 768px;
+		padding: 10px 64px;
+	}
+	nav ul {
+		width: 481px;
+	}
+	
+	nav ul li {
+		padding: 8px 30px;
+	}
+	
+	/* Sections / Pages */
+	section .contentArea {
+		width: 768px;
+		padding: 10px 64px;
+	}
+	
+	/* Block-level elements */
+	
+	.col-3 { display: none;}
+
+	.infographic { 
+		width: 768px;
+		overflow: hidden;
+	}
+	
+	.filterWrap {
+		width: 768px;
+		margin-left: -64px;
+		height: 40px;
+		padding: 5px 64px 0px;
+	}
+	
+	.filterWrap .filters { 
+		width: 616px;
+		overflow: hidden;
+	}
+	
+	/* Products & Services */
+	.videoDesc {
+		padding-top:;
+	}
+	
+	#play .controls { top: 310px;}
+	#play .prev { left: 0px;}
+	#play .next { right: 0px;}
+	
+	/* History Timeline */
+	#inspire .controls { top: 710px;}
+	#inspire .prev { left: 310px;}
+	#inspire .next { right: 310px;}
+	
+	#inspire .filterWrap .filters ul li { margin: 0px 19px;}
+
+	/* Team */
+	#discover .controls { top: 840px;}
+	#discover .prev { left: 310px;}
+	#discover .next { right: 310px;}
+	
+	#discover .filterWrap { position: relative;}
+	
+	#discover .filterWrap .filters ul { margin-left: 0px;}
+	#discover .filterWrap .filters ul li { margin: 0px 0px;}
+	
+	/*#discover .fade {
+		width: 640px;
+		height: 30px;
+		background:url(../images/filter_fade.png) no-repeat top center;
+		position: absolute;
+		top: 5px;
+		left: 64px;
+		z-index: 8;
+	}*/
+	
+	
+	/* Careers & Contact Us */
+	#talk .job .info {
+		width: 420px;
+	}
+	
+	#talk .job .apply {
+		width: 125px;
+	}
+	
+	#talk section .addressWrap {
+		width: 230px; 
+		float: left;
+		margin-bottom: 10px;
+	}
+		
+	#talk section .map {
+		width: 400px;
+		height: 250px;
+		margin-bottom: 0px;
+	}
+	
+	/* Footer */
+	footer p {
+		width: 768px;
+	}
+}
+
+/* Mobile - Landscape  */
+@media screen and (max-width: 768px) {
+	/* Global */
+
+	h1 { font-size: 2em; } 							/* 28pt / 14pt */
+	h2 { font-size: 1.142857142857143em; } 			/* 16pt / 14pt */
+	
+	/* Header / Nav */
+	nav {
+		width: 480px;
+		height: 56px;
+		padding: 7px 20px;
+	}
+	nav ul {
+		width: 300px;
+		height: 30px;
+		overflow: hidden;
+	}
+	
+	nav ul li {
+		padding: 8px 10px;
+	}
+	
+	nav .logo { 
+		width: 107px;
+		height: 41px;
+		background: url(/templates/images/saffron_logo_mobile.gif) no-repeat top left;
+	}
+	
+	/* Sections / Pages */
+	section {
+		min-height: 300px;
+	}
+	
+	section .contentArea {
+		width: 480px;
+		padding: 10px 80px;
+	}
+	
+	section#play .contentArea { margin-top: 56px; overflow: hidden;}
+	
+	section header h1, section header h2 {
+		padding: 3px 10px;
+	}
+	
+	/* Block-level elements */
+	#play .controls {
+		top: 300px;
+	}
+
+	.video { 
+		position: relative;
+		float: left;
+		cursor: pointer;
+		margin: 0px 10px;
+	}
+	
+	.video:nth-of-type(2),
+	.video:nth-of-type(4) {
+		opacity: .5;	
+	}
+	
+	.infographic {
+		width: 480px;
+	}
+	
+	.col-1, .col-2, .col-3 {
+		float: left;
+		display: inline-block;
+		margin: 10px 0px;
+	}
+	
+	.filterWrap {
+		width: 480px;
+		margin-left: -80px;
+		padding: 5px 10px 0px;
+	}
+	
+	.filterWrap .filters { 
+		width: 436px;
+		overflow: hidden;
+	}
+		
+	/* Products & Services */
+	#videoContainer {
+		height: auto;
+		width: 320px;
+		margin: 10px 0px 0px;
+		position: relative;
+	}
+	
+	ul.pagination {
+		margin: 3px 0px 0px;
+	}
+	
+	#videoCarousel {
+		position: absolute;
+		top: 20px;
+		left: -650px;
+		width: 1600px;
+		height: 170px;
+	}
+	
+	.videoDesc {
+		clear: both;
+		width: 300px;
+		padding-top: 230px;
+	}
+	
+	.videoDesc h2	{ margin-bottom: 5px;}	
+	.videoDesc p { display: none;}
+	
+	/* History Timeline */
+	#inspire .filterWrap .filters ul li {
+		margin: 0 0px;
+		padding: 8px 24px;
+	}
+	
+	#inspire .controls { top: 290px;}
+	#inspire .prev { left: 0px;}
+	#inspire .next { right: 0px;}
+	
+	#timelineContainer {
+		position: absolute;
+		top: 0px;
+		left: -1285px;
+		width: 2880px;
+		height: 170px;
+		margin: 10px 0px 60px;
+		position: relative;
+		overflow: visible;
+	}
+	
+	#timelineContainer .col-1, #timelineContainer .col-2, #timelineContainer .col-3 {
+		width: 960px;
+	}
+	
+	.timeline { 
+		margin: 0px 10px;
+		opacity: .5;
+	}
+	
+	.timeline.active { opacity: 1; }
+	
+	/* Team */
+	
+	#discover .controls { top: 445px;}
+	#discover .prev { left: 0px;}
+	#discover .next { right: 0px;}
+	
+	#teamContainer {
+		position: absolute;
+		top: 0px;
+		left: -965px;
+		width: 1920px;
+		height: 320px;
+		margin: 10px 0px 60px;
+		position: relative;
+		overflow: visible;
+	}
+	
+	#teamContainer .col-1, #teamContainer .col-2, #teamContainer .col-3 {
+		width: 640px;
+	}
+	
+	.team { 
+		margin: 0px 10px;
+		opacity: .5;
+	}
+	
+	.team.active { opacity: 1; }
+	
+	/* Careers & Contact Us */
+	#talk .job .info {
+		width: 245px;
+		padding-left: 15px;
+	}
+	
+	#talk .job .apply {
+		clear: both;
+		width: 300px;
+		margin-top: 10px;   
+		height: 39px;
+    	padding: 8px 0;
+		-moz-border-radius: 5px;
+		     border-radius: 5px;
+	}
+	
+	#talk section .addressWrap {
+		width: 100%; 
+		float: none;
+		margin-bottom: 0px;
+		overflow: hidden;
+	}
+		
+	#talk section .map {
+		float: none;
+		width: 300px;
+		height: 200px;
+		margin: 10px;
+	}
+	
+	/* Footer */
+	footer p {
+		width: 480px;
+	}
+}
+
+/* Mobile - Portrait  */
+@media screen and (max-width: 480px) {
+	/* Global */
+	h1 { font-size: 1.428571428571429em; } 			/* 20pt / 14pt */
+	h2 { font-size: 1.071428571428571em; } 			/* 15pt / 14pt */
+	
+	/* Header / Nav */
+	nav {
+		width: 310px;
+		padding: 7px 5px;
+	}
+	
+	nav ul {
+		width: auto;
+		height: 30px;
+		overflow: hidden;
+		margin: 20px 0px 0px 0px;
+	}
+
+	nav ul li a {
+		text-transform: none;
+	}
+	
+	nav ul li.contact a {
+		background: none;
+		font-weight: normal;
+		color: #999;
+	}
+	
+	nav ul li {
+		padding: 8px 10px;
+	}
+	
+	nav .mobiledd {
+		float: right;
+		width: 49px;
+		height: 41px;
+		background: url(/templates/images/menu_tab.gif) no-repeat top left;
+		position: relative;
+		margin: 9px -5px 0px 0px;
+	}
+	
+	nav .mobiledd ul {
+		display: none;
+		position:absolute;
+		right: 0px;
+		top: 41px;
+		margin: 0px;
+		height: auto;
+		width: 310px;
+		background-color: #efefef;
+	}
+	
+	nav .mobiledd:hover ul { display: block;}
+	
+	nav .mobiledd ul li {
+		float: none;
+		border-bottom: 1px solid #fff;
+		width: 280px;
+		margin: 0px 15px;
+		padding: 0px;
+	}
+	
+	nav .mobiledd ul li a {
+		padding: 15px 0px;
+		text-align: center;
+		width: 280px;
+		display: block;
+	}
+	
+	/* Sections / Pages */
+	section {
+		min-height: 200px;
+	}
+	
+	section .contentArea {
+		width: 310px;
+		padding: 10px 0px;
+	}
+		
+	section header h1, section header h2 {
+		padding: 3px 10px;
+	}
+	
+	/* Block-level elements */
+	.controls {
+		clear: both;
+		position: relative;
+		top: auto;
+		left: auto;
+		margin: 5px 10px;
+		text-indent: 0px;
+		height: auto;
+		width: 100%;
+		font-weight: bold;
+		padding: 5px;
+		text-align:center;
+	}
+	
+	.prev {
+		float: left;
+		background-image: none;
+		background-color: #CCCCCC;
+	}
+	.next {
+		float: right;
+	}
+	
+	.infographic {
+		width: 310px;
+	}
+
+	
+	/* Products & Services */
+	#videoContainer {
+		width: 300px;
+		overflow: hidden;
+		margin: 0px 5px;
+	}
+	
+	#play .controls { 
+	}
+	
+	/* History Timeline */
+
+	/* Team */
+	
+	/* Careers & Contact Us */
+	#talk .job .info {
+		width: 245px;
+		padding-left: 15px;
+	}
+	
+	#talk .job .apply {
+		clear: both;
+		width: 300px;
+		margin-top: 10px;   
+		height: 39px;
+    	padding: 8px 0;
+		-moz-border-radius: 5px;
+		     border-radius: 5px;
+	}
+	
+	#talk section .addressWrap {
+		width: 100%; 
+		float: none;
+		margin-bottom: 0px;
+		overflow: hidden;
+	}
+		
+	#talk section .map {
+		float: none;
+		width: 300px;
+		height: 200px;
+		margin: 10px;
+	}
+	
+	/* Footer */
+	footer p {
+		width: 320px;
+	}
+}
+
+/* Tablet - Portrait & Up */
+@media screen and (min-width: 769px) {
+	.video { 
+		margin: 0px; 
+		height: 320px;
+		width: 565px;
+		cursor: pointer;
+	}
+	
+	.video:nth-of-type(1) { /* left-back element */
+		display: none;
+	}
+	
+	.video:nth-of-type(2) { /* left-middle element */
+		top: 35px;
+		left: 0px;
+		z-index: 2;
+		height: 290px;	
+		width: 433px;
+		opacity: .7;	
+	}
+	
+	.video:nth-of-type(3) { /* center-front element */
+		top: 20px;
+		left: 37px;
+		z-index: 3;
+	}
+	
+	.video:nth-of-type(4) { /* right-middle element */
+		top: 35px;
+		right: 0px;
+		z-index: 2;
+		height: 290px;	
+		width: 433px;
+		opacity: .7;
+	}
+	
+	.video:nth-of-type(5) { /* right-back element */
+		display: none;
+	}
+}
+
+/* Tablet & Desktop Browser  */
+@media screen and (min-width: 1025px) {
+	/* Block-level elements */
+	
+	.video:nth-of-type(1) { /* left-back element */
+		top: 50px;
+		left: 0px;
+		z-index: 1;
+		height: 257px;
+		width: 385px;
+		opacity: .5;
+		display: block;
+	}
+	
+	.video:nth-of-type(2) { /* left-middle element */
+		top: 35px;
+		left: 40px;
+		z-index: 2;
+		height: 290px;	
+		width: 433px;
+		opacity: .7;	
+	}
+	
+	.video:nth-of-type(3) { /* center-front element */
+		top: 20px;
+		left: 197px;
+		z-index: 3;
+	}
+	
+	.video:nth-of-type(4) { /* right-middle element */
+		top: 35px;
+		right: 40px;
+		z-index: 2;
+		height: 290px;	
+		width: 433px;
+		opacity: .7;
+	}
+	
+	.video:nth-of-type(5) { /* right-back element */
+		top: 50px;
+		right: 0px;
+		z-index: 1;
+		height: 257px;
+		width: 385px;
+		opacity: .5;
+		display: block;
+	}
+}
+
+
+/* Desktop Browser  */
+@media screen and (min-width: 1281px) {
+	
+	/* Products & Services */
+	
+	/* Footer */
+	footer {
+		width: 100%;
+	}
+	
+	footer p {
+		width: 1280px;
+		margin: 10px auto;
+		padding: 0px 0px;
+	}
+}

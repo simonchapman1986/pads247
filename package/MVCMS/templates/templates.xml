@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+    <template>
+    	<name>Landing Page</name>
+        <friendlyname>Landing Page</friendlyname>
+        <cols>1</cols>
+        <editableareas>1</editableareas>
+        <desc>Landing Page</desc>
+        <file>main.html</file>
+    </template>
+    <template>
+    	<name>Blog</name>
+        <friendlyname>Blog</friendlyname>
+        <cols>1</cols>
+        <editableareas>1</editableareas>
+        <desc>Blog</desc>
+        <file>blog.html</file>
+    </template>
+</templates>

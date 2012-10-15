@@ -1,0 +1,93 @@
+MVCMS v2.0<br />
+<br />
+This is the MVCMS.<br />
+<br />
+<br />
+A lots of changes have taken place since v1<br />
+<br />
+<br />
+# Complete restructure<br />
+# simplified<br />
+# Easier to install modules and configure<br />
+# core area is symlinkable for multiple sites running off the same code (space saving as no need to edit)<br />
+# only need to amend 5 config details in the root config.php file and create templates<br />
+# Modules use php5 oop so copy same pattern as previous for examples the system will auto detect the file<br />
+# use the mvcms.sql file for default structure, addition tables can of course be used for new modules<br />
+# use preset functions detailed later in the system<br />
+<br />
+<br />
+# NOTE: When removing modules ensure you delete them via the CMS first prior to removing the files (if you absolutely need to remove files that is. If it is not done in this order you may cause errors and will not beable to remove them from the DB (unless done manually)<br />
+<br />
+<br />
+# template files need to contain a few custom tags in order to bring the CMS content in from the database e.g. '[content]' for the main page content.<br />
+# you can setup as many templates as you wish these are auto-detected in the CMS and available for your use. The System will also pre-check for the tags and alert if not
+# present.<br />
+#<br />
+# 4 main template files required<br />
+	# main.cms<br />
+	# nav.cms (optional depending on whether you use the auto-create navigation)<br />
+	# header.cms<br />
+	# footer.cms<br />
+	<br />
+	# these control the main layout and are required the system will provide a warning notice if they cannot be found<br />
+	<br />
+# all pages can be added in the CMS these apend to the navigation if wanted (optional)<br />
+# you can even write in your dynamic content or use one of your module outputs to show that relevant data<br />
+# meta data is configurable in the CMS too this can include adding additional style sheets please put these in the default directory too<br />
+<br />
+##############################################<br />
+# default functions:<br />
+	# new db<br />
+		# this initiated a new db connection<br />
+	<br />
+	# new login<br />
+		# this initiated a new login check<br />
+		<br />
+	# $e = new error; $e->err('error code');<br />
+		# calls a new error<br />
+		<br />
+	# $set = new settings; $set->grab('copyright'); / for example<br />
+		# calls key settings from db / in this example the copyright notice<br />
+		<br />
+# there is many more to come and will be updates via the core as necessary<br />
+##############################################<br />
+<br />
+# locations<br />
+	# modules<br />
+		# /core/'site_specific_folder'/modules/<br />
+	<br />
+	# templates<br />
+		# /templates<br />
+		<br />
+	# config<br />
+		# /config.php<br />
+##############################################		<br />
+DO NOT EDIT ANYTHING INSIDE THE CORE CORE FOLDER<br />
+	# /core/core/*<br />
+	<br />
+	# This is the main engine of the site and is used for multiple sites<br />
+	# if you need to amend a class use the 'extends' function for classes to alter and use inside your <br />
+	# /core/'site_specific_folder'/core.php<br />
+	# file although this shouldn't really be necessary<br />
+	<br />
+##############################################<br />
+<br />
+if in doubt don't fiddle...<br />
+<br />
+<br />
+Enjoy<br />
+<br />
+Thanks
+<br /><br />
+##############################################<br />
+##############################################<br />
+Updates and Bug Fixes:<br />
+<br />
+<u>01/11/2010</u><br /><br />
+# Update to core and htaccess allowing for level 2 pages <br />
+# Addition to DB for parent id<br />
+# Addition to core for 'sub page' detection<br />
+# Updates also made to 'content' class module<br />
+----------------------------------------------<br />
+##############################################<br />
+##############################################<br />
